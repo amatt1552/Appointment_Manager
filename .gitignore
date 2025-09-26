@@ -1,6 +1,7 @@
 /build/
 /nbproject/
 /Libraries/
+/dist/
 
 *.zip
 *.class
