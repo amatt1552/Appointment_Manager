@@ -1,20 +1,20 @@
-Title: Appointment Manager
-Author: Austin Matthews
-Email: amat151@wgu.edu
-Version: 1.1
-Date: 5/7/2021
+Title: Appointment Manager  
+Author: Austin Matthews  
+Email: amat151@wgu.edu  
+Version: 1.1  
+Date: 5/7/2021  
 
 Description: The purpose of this application is to add and set customers and appointments.
 
 
 Notes:
 ----------------------------------------------------------------------------------------------------
-Unfortunately this project no longer runs due to depending a database that no longer exists.
-There has been an error where the database connection closes after being inactive for too long then doesn't open again. 
-I think i've fixed that error, but if you cannot open the reports menu it most likely is caused by that. A restart of the application will always fix it.
-Lambdas can be found in the AppointmentManager class. 
-The report i decided to use counts the number of appointments a customer has. I would have put it in the customer menu but felt like it would be easier if all the reports were in the same place.
-Driver Version is mysql-connector-java-8.0.23
+Unfortunately this project no longer runs due to depending a database that no longer exists.  
+There has been an error where the database connection closes after being inactive for too long then doesn't open again.   
+I think i've fixed that error, but if you cannot open the reports menu it most likely is caused by that. A restart of the application will always fix it.  
+Lambdas can be found in the AppointmentManager class.  
+The report i decided to use counts the number of appointments a customer has. I would have put it in the customer menu but felt like it would be easier if all the reports were in the same place.  
+Driver Version is mysql-connector-java-8.0.23  
 
 
 Login Menu:
@@ -65,6 +65,6 @@ The times can be set in the format H:mm or HH:mm eg: 3:33 or 03:33
 The (current) next to user id means its the user you logged in with.
 
 
-Reports Menu
+Reports Menu:
 ----------------------------------------------------------------------------------------------------
 Everything dealing with A3f in the requrements is found here.
