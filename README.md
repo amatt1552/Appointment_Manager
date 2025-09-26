@@ -10,6 +10,7 @@ Description: The purpose of this application is to add and set customers and app
 Notes:
 ----------------------------------------------------------------------------------------------------
 Unfortunately this project no longer runs due to depending a database that no longer exists.  
+
 There has been an error where the database connection closes after being inactive for too long then doesn't open again.   
 I think i've fixed that error, but if you cannot open the reports menu it most likely is caused by that. A restart of the application will always fix it.  
 Lambdas can be found in the AppointmentManager class.  
