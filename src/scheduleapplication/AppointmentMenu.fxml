@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane stylesheets="@Borders.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduleapplication.AppointmentMenuController">
+   <children>
+      <BorderPane minHeight="0.0" minWidth="0.0" prefHeight="442.0" prefWidth="900.0" styleClass="addBorder" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <bottom>
+            <HBox alignment="BOTTOM_RIGHT" maxHeight="49.0" prefHeight="49.0" prefWidth="730.0" spacing="10.0" BorderPane.alignment="BOTTOM_RIGHT">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#returnPressed" text="Return To Menu" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" right="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </bottom>
+         <top>
+            <Label prefHeight="40.0" prefWidth="235.0" text="Appointments" BorderPane.alignment="CENTER_LEFT">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </top>
+         <center>
+            <BorderPane maxHeight="500.0" minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="478.0" BorderPane.alignment="TOP_RIGHT">
+               <top>
+                  <GridPane prefHeight="40.0" prefWidth="880.0" BorderPane.alignment="CENTER_RIGHT">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="5.0" prefWidth="490.0" spacing="10.0">
+                           <children>
+                              <Label text="Selection:" />
+                              <RadioButton fx:id="allRadio" layoutX="72.0" layoutY="21.0" mnemonicParsing="false" onAction="#toAll" selected="true" text="All">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="orderBy" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="monthRadio" mnemonicParsing="false" onAction="#toCurrentMonth" text="Current Month" toggleGroup="$orderBy" />
+                              <RadioButton fx:id="weekRadio" mnemonicParsing="false" onAction="#toCurrentWeek" text="Current Week" toggleGroup="$orderBy" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </top>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <bottom>
+                  <BorderPane minHeight="0.0" minWidth="0.0" BorderPane.alignment="CENTER">
+                     <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="444.0" spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="deleteButton" disable="true" mnemonicParsing="false" onAction="#deleteAppointmentPressed" text="Delete Appointment" />
+                              <Button fx:id="updateAppointmentButton" disable="true" mnemonicParsing="false" onAction="#updateAppointmentPressed" text="Update Appointment" />
+                              <Button fx:id="addAppointmentButton" layoutX="623.0" layoutY="15.0" mnemonicParsing="false" onAction="#addAppointmentPressed" text="Add Appointment" />
+                           </children>
+                        </HBox>
+                     </right>
+                     <left>
+                        <TextArea fx:id="messageArea" editable="false" prefHeight="30.0" prefWidth="430.0" styleClass="removeBorderTextArea" visible="false" BorderPane.alignment="CENTER" />
+                     </left>
+                  </BorderPane>
+               </bottom>
+               <center>
+                  <ScrollPane BorderPane.alignment="CENTER">
+                     <content>
+                        <TableView fx:id="table" onMouseClicked="#appointmentSelectedCheck" prefHeight="500.0" prefWidth="1500.0">
+                           <columns>
+                              <TableColumn fx:id="appointmentID" prefWidth="102.40001714229584" text="Appointment ID" />
+                              <TableColumn fx:id="title" prefWidth="55.19999694824219" text="Title" />
+                              <TableColumn fx:id="description" prefWidth="139.2000274658203" text="Description" />
+                              <TableColumn fx:id="location" minWidth="0.0" prefWidth="0.0" text="Location" />
+                              <TableColumn fx:id="contact" prefWidth="100.0" text="Contact" />
+                              <TableColumn fx:id="type" minWidth="8.0" prefWidth="100.0" text="Type" />
+                              <TableColumn fx:id="startTime" prefWidth="121.59991455078125" text="Start Date and Time" />
+                              <TableColumn fx:id="endTime" minWidth="0.0" prefWidth="115.20001220703125" text="End Date and Time" />
+                              <TableColumn fx:id="customerID" prefWidth="84.80010986328125" text="Customer ID" />
+                              <TableColumn fx:id="userID" prefWidth="56.0" text="User ID" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

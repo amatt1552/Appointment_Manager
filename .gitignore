@@ -1,0 +1,8 @@
+/build/
+/nbproject/
+/Libraries/
+
+*.zip
+*.class
+*.log
+*.jar

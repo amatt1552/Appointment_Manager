@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="362.0" prefWidth="842.0" stylesheets="@Borders.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduleapplication.CustomerMenuController">
+   <children>
+      <BorderPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="862.0" styleClass="addBorder" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="842.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#returnPressed" text="Return To Menu" />
+               </children>
+               <padding>
+                  <Insets right="15.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <center>
+            <BorderPane maxHeight="500.0" minHeight="0.0" minWidth="0.0" prefHeight="272.0" prefWidth="635.0" BorderPane.alignment="TOP_LEFT">
+               <bottom>
+                  <BorderPane minHeight="0.0" minWidth="0.0" prefHeight="40.0" prefWidth="792.0" BorderPane.alignment="CENTER">
+                     <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="436.0" spacing="10.0" BorderPane.alignment="CENTER_LEFT">
+                           <children>
+                              <Button fx:id="deleteButton" disable="true" mnemonicParsing="false" onAction="#deleteCustomerPressed" text="Delete Customer" />
+                              <Button fx:id="updateCustomerButton" disable="true" mnemonicParsing="false" onAction="#updateCustomerPressed" prefWidth="128.0" text="Modify Customer" />
+                              <Button fx:id="addCustomer" layoutX="344.0" layoutY="10.0" mnemonicParsing="false" onAction="#addCustomerPressed" prefWidth="128.0" text="Add Customer" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                     </right>
+                     <left>
+                        <TextArea fx:id="messageArea" editable="false" prefHeight="40.0" prefWidth="374.0" styleClass="removeBorderTextArea" visible="false" BorderPane.alignment="CENTER" />
+                     </left>
+                  </BorderPane>
+               </bottom>
+               <center>
+                  <ScrollPane prefHeight="199.0" prefWidth="812.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <TableView fx:id="customerTable" onMouseClicked="#customerSelectedCheck" prefHeight="500.0" prefWidth="1500.0">
+                          <columns>
+                            <TableColumn fx:id="ID" prefWidth="48.80001753568649" text="ID" />
+                            <TableColumn fx:id="name" prefWidth="200.00006866455078" text="Name" />
+                              <TableColumn fx:id="address" prefWidth="212.7999267578125" text="Address" />
+                              <TableColumn fx:id="postalCode" prefWidth="141.59994506835938" text="Postal Code" />
+                              <TableColumn fx:id="phoneNumber" prefWidth="153.5999755859375" text="Phone Number" />
+                              <TableColumn fx:id="divisionID" prefWidth="54.39990234375" text="Div ID" />
+                          </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </center>
+               <BorderPane.margin>
+                  <Insets left="15.0" right="15.0" />
+               </BorderPane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </BorderPane>
+         </center>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="842.0" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="200.0" text="Customers">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

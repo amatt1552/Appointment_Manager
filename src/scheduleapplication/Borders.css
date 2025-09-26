@@ -1,0 +1,16 @@
+.addBorder{
+-fx-border-width: 2px;
+-fx-border-color: grey;
+
+}
+
+.removeBorder{
+-fx-border-width: 0px;
+-fx-border-color: grey;
+
+}
+
+.removeBorderTextArea{
+-fx-background-color:transparent;
+}
+

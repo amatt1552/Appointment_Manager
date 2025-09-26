@@ -1,0 +1,21 @@
+.customerButton{
+    -fx-background-image: url(customerIcon.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 99% 99%;
+}
+
+.appointmentButton{
+    
+    -fx-background-image: url(appointmentIcon.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 99% 99%;
+}
+
+.reportButton{
+    -fx-background-image: url(reportIcon.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 99% 99%;
+}
