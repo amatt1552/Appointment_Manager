@@ -1,4 +1,4 @@
-Title: Appointment Manager  
+# Appointment Manager  
 Author: Austin Matthews  
 Email: amat151@wgu.edu  
 Version: 1.1  
